@@ -59,7 +59,7 @@ const TreeNode = ({node}) => {
 
     if (!has_children) {
 
-        return (<Child className={"child"}/>)
+        return (<Child/>)
 
     }
 
