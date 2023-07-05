@@ -1,7 +1,7 @@
 Hi
 
 this project was built with the following configuration
-![](C:\Users\yaron\WebstormProjects\nominal_js\Animation.gif)
+![](C:\Users\yaron\WebstormProjects\nominal_js\public\Animation.gif)
    
 to run the project clone it
 
