@@ -24,6 +24,8 @@ and then npm run dev
        {
        _id: ObjectId, 
        name: String,   
+       has_children: Boolean, 
+
        
        
        },
