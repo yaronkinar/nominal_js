@@ -56,19 +56,23 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 .child{
-  padding-left:2rem;
+  padding-left:30px;
   cursor:auto;
-  border: none;
+  list-style: none;
+
+
 
 }
 .parent{
-  cursor: pointer;
+  cursor: pointer
+ /* cursor: pointer;
   border-radius:5px;
   flex-direction: column;
   padding:10px;
   display: flex;
-  margin-bottom: 5px ;
-  border: 1px solid black;
+  margin-bottom: 5px ;*/
+
+
 
 
 
@@ -77,11 +81,11 @@ button:focus-visible {
   cursor: pointer;
   border-radius:5px;
   flex-direction: column;
-  padding:10px;
   display: flex;
   margin-bottom: 5px ;
   align-items: center;
   justify-content: center;
+
 }
 
 ul{

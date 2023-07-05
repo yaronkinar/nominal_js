@@ -12,7 +12,7 @@ export default function App() {
   })
   return (
       <>
-      <h1 className="flex">Accounts</h1>
+      <h1 className="flex">Accounts ({accounts.length})</h1>
       <div className="flex">
           <Tree data={accounts} parentToChild={parentsToChildren}/>
 
