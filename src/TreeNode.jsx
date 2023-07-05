@@ -11,8 +11,8 @@ import CollapsableButtons from "./collapsableButtons.jsx";
 const TreeNode = ({node}) => {
     const dispatch = useDispatch()
     const [collapsed, setCollapsed] = useState(true);
-    let isChild = node?.isChild;
-    let has_children = node?.has_children ;
+    const isChild = node?.isChild;
+    const has_children = node?.has_children ;
 
     const parentsToChildren = useSelector((state) => {
 
@@ -20,9 +20,15 @@ const TreeNode = ({node}) => {
     })
 
 
+    const parentsToChild = parentsToChildren && parentsToChildren[node.id];
 
-    let parentsToChild = parentsToChildren && parentsToChildren[node.id];
+    const Child = ()=> {
+        return (<li className="child">
 
+
+            {node?.name}
+        </li>)
+    }
     const toggleCollapse = (event, nodeId) => {
         event.preventDefault()
         if (collapsed && node.has_children && !parentsToChild?.length > 0) {
@@ -38,7 +44,7 @@ const TreeNode = ({node}) => {
     };
 
     if (has_children) {
-        return (<ul className={ "parent"}>
+        return (<ul className={isChild ? "child" : "parent"}>
             <li onClick={(event) => {
                 toggleCollapse(event, node?.id)
             }}>
@@ -53,17 +59,9 @@ const TreeNode = ({node}) => {
 
     if (!has_children) {
         if (isChild) {
-            return (<li className="child">
-
-
-                {node?.name}
-            </li>)
+            return (<Child/>)
         } else {
-            return (<li className="child">
-
-
-                    {node?.name}
-                </li>)
+            return (<Child/>)
         }
     }
 
