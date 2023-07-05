@@ -12,17 +12,17 @@ const TreeNode = ({node}) => {
     const dispatch = useDispatch()
     const [collapsed, setCollapsed] = useState(true);
     const isChild = node?.isChild;
-    const has_children = node?.has_children ;
+    const has_children = node?.has_children;
 
     const parentsToChildren = useSelector((state) => {
 
-        return  state.accounts.parentsToChildren
+        return state.accounts.parentsToChildren
     })
 
 
     const parentsToChild = parentsToChildren && parentsToChildren[node.id];
 
-    const Child = ()=> {
+    const Child = () => {
         return (<li className="child">
 
 
@@ -36,8 +36,8 @@ const TreeNode = ({node}) => {
             dispatch(expand(nodeId))
         }
 
-        setCollapsed((prev) => {
-            return !prev
+        setCollapsed((collapsed) => {
+            return !collapsed
         });
 
 
@@ -52,17 +52,15 @@ const TreeNode = ({node}) => {
 
                 {node?.name}
             </li>
-            {!collapsed && node?.has_children  &&  parentsToChild?.map((child) => (
+            {!collapsed && node?.has_children && parentsToChild?.map((child) => (
                 <TreeNode className={"child"} key={child.id} node={child} isChild={true}/>))}
         </ul>)
     }
 
     if (!has_children) {
-        if (isChild) {
-            return (<Child/>)
-        } else {
-            return (<Child/>)
-        }
+
+        return (<Child className={"child"}/>)
+
     }
 
 };

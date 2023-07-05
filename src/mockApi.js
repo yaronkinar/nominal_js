@@ -1,12 +1,13 @@
-
 export function generateRandomId() {
 // Generate a random 6-character alphanumeric ID
     return Math.random().toString(36).substr(2, 6);
 }
+
 function generateRandomBoolean() {
 // Generate a random boolean value (true or false)
     return Math.random() < 0.5;
 }
+
 export function convertToMap(array) {
     const treeData = new Map();
     console.log(treeData)
@@ -17,7 +18,8 @@ export function convertToMap(array) {
     return treeData
 
 }
-export  function convertToObject(array) {
+
+export function convertToObject(array) {
 
     const object = array.reduce((acc, obj) => {
         acc[obj.id] = obj;
@@ -25,6 +27,7 @@ export  function convertToObject(array) {
     }, {});
     return object;
 }
+
 export function generateNodes() {
     const nodes = [];
     const numElements = Math.floor(Math.random() * 4) + 2;
@@ -39,6 +42,7 @@ export function generateNodes() {
     }
     return nodes;
 }
+
 export function generateChildNodes(parentId) {
     const nodes = [];
     const numElements = Math.floor(Math.random() * 4) + 2;
@@ -47,14 +51,15 @@ export function generateChildNodes(parentId) {
         const node = {
             id,
             name: `Account ${id}`,
-            has_children:  generateRandomBoolean(),
+            has_children: generateRandomBoolean(),
             isChild: true,
-            parentId:parentId
+            parentId: parentId
         };
         nodes.push(node);
     }
     return nodes;
 }
+
 // Usage
 //const baseName = "Element";
 export const result = generateNodes();
