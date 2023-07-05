@@ -39,7 +39,7 @@ export function generateNodes() {
     }
     return nodes;
 }
-export function generateChildNodes() {
+export function generateChildNodes(parentId) {
     const nodes = [];
     const numElements = Math.floor(Math.random() * 4) + 2;
     for (let i = 0; i < numElements; i++) {
@@ -47,8 +47,9 @@ export function generateChildNodes() {
         const node = {
             id,
             name: `Account ${id}`,
-            has_children: false,
-            isChild: true
+            has_children:  generateRandomBoolean(),
+            isChild: true,
+            parentId:parentId
         };
         nodes.push(node);
     }

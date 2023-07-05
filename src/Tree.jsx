@@ -1,16 +1,20 @@
 import TreeNode from "./TreeNode.jsx";
+import {useSelector} from "react-redux";
 
 
 // eslint-disable-next-line react/prop-types
 const Tree = ({data}) => {
-    console.log(data)
+
     return (
         <div >
+            {Object.entries(data).map(([key, value]) => (
+                <div key={key}>
 
-
-            {data?.map((datum) => (
-                <TreeNode key={datum.id} node={datum}  />
+                    <TreeNode data={data}   node={value}  />
+                </div>
             ))}
+
+
 
         </div>
     );

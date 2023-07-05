@@ -58,16 +58,17 @@ button:focus-visible {
 .child{
   padding-left:2rem;
   cursor:auto;
+  border: none;
 
 }
 .parent{
   cursor: pointer;
   border-radius:5px;
-  border: 1px solid black;
   flex-direction: column;
   padding:10px;
   display: flex;
   margin-bottom: 5px ;
+  border: 1px solid black;
 
 
 
@@ -75,7 +76,6 @@ button:focus-visible {
 .noParent{
   cursor: pointer;
   border-radius:5px;
-  border: 1px solid black;
   flex-direction: column;
   padding:10px;
   display: flex;
@@ -88,7 +88,7 @@ ul{
   list-style: none;
 }
 .parent:hover{
-    background-color: lightgray;
+
 }
 .flex{
   display: flex;
