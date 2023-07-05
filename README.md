@@ -1,8 +1,8 @@
 Hi
 
 this project was built with the following configuration
-![](C:\Users\yaron\WebstormProjects\nominal_js\public\Animation.gif)
-   
+![alt text](public/Animation.gif)
+
 to run the project clone it
 
 and then run
