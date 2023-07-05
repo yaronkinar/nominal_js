@@ -56,7 +56,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 .child{
-  padding-left:30px;
+  padding-left:25px;
   cursor:auto;
   list-style: none;
 
@@ -64,7 +64,9 @@ button:focus-visible {
 
 }
 .parent{
-  cursor: pointer
+  cursor: pointer;
+  margin-left:0;
+  padding:10px
  /* cursor: pointer;
   border-radius:5px;
   flex-direction: column;
