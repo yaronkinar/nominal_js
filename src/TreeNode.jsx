@@ -2,6 +2,7 @@ import {useState} from "react";
 import {expand} from './feature/accounts/AccountsSlice.js'
 import {useDispatch, useSelector} from 'react-redux'
 import CollapsableButtons from "./collapsableButtons.jsx";
+import PropTypes from "prop-types";
 
 // eslint-disable-next-line react/prop-types
 
@@ -63,5 +64,12 @@ const TreeNode = ({node}) => {
 
     }
 
+};
+TreeNode.propTypes = {
+    node: PropTypes.shape({
+        isChild: PropTypes.bool.isRequired,
+        hasChildren: PropTypes.bool.isRequired,
+        // other prop types for 'node' if applicable
+    }).isRequired,
 };
 export default TreeNode;
