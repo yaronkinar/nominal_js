@@ -5,14 +5,13 @@ import TreeNode from "./TreeNode.jsx";
 const Tree = ({data}) => {
 
     return (
-        <div >
+        <div>
             {Object.entries(data).map(([key, value]) => (
                 <div key={key}>
 
-                    <TreeNode  data={data}   node={value}  />
+                    <TreeNode data={data} node={value}/>
                 </div>
             ))}
-
 
 
         </div>
