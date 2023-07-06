@@ -67,8 +67,8 @@ const TreeNode = ({node}) => {
 };
 TreeNode.propTypes = {
     node: PropTypes.shape({
-        isChild: PropTypes.bool.isRequired,
-        hasChildren: PropTypes.bool.isRequired,
+        isChild: PropTypes.bool,
+        hasChildren: PropTypes.bool,
         id: PropTypes.string,
         // other prop types for 'node' if applicable
     }).isRequired,
